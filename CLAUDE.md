@@ -75,6 +75,7 @@ Output (incl. thinking) costs ~5× input, so output is where savings matter. Mea
 
 ## Gotchas (learned the hard way)
 
+- **Asset caching**: always enqueue CSS/JS with `BZPSO_Plugin::asset_version( 'assets/…' )` (version + file mtime), and bump `BZPSO_VERSION` + the header `Version:` + readme `Stable tag`/changelog for each release. With a fixed `?ver=` the owner's browser/cache kept an old `admin.js` against new PHP ("config.defaultFields is undefined", 2026-10-08).
 - **Reload after apply is required**: Yoast's meta box on the open page holds the old values and would overwrite the new ones on the next "Update". `admin.js` unbinds `beforeunload.edit-post` and warns about unsaved editor changes first.
 - **Don't use `sanitize_text_field()` for SEO titles**: it strips `%xx` sequences and breaks Yoast variables like `%%category%%`. Use `BZPSO_Sanitizer::line()`.
 - **AJAX errors use HTTP 400/403/429, never 502/504**: Cloudflare and some hosts replace 5xx bodies, which hides our error message.
