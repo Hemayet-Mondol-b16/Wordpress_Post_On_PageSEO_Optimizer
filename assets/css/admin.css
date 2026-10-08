@@ -1,0 +1,284 @@
+/* Post SEO Optimizer – admin styles. */
+
+/* Meta box controls */
+.bzpso-app .notice.inline {
+	margin: 8px 0 12px;
+}
+
+.bzpso-controls {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-end;
+	gap: 8px 16px;
+}
+
+.bzpso-control {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	margin: 0;
+}
+
+.bzpso-control label {
+	font-weight: 600;
+}
+
+.bzpso-control input[type="text"] {
+	min-width: 220px;
+}
+
+.bzpso-control-wide {
+	flex: 1 1 280px;
+}
+
+.bzpso-control-wide input[type="text"] {
+	width: 100%;
+}
+
+.bzpso-control-full {
+	flex: 1 1 100%;
+}
+
+.bzpso-gen-fields {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 4px 14px;
+	border: 0;
+	padding: 0;
+}
+
+.bzpso-gen-fields legend {
+	float: left;
+	margin-right: 6px;
+	font-weight: 600;
+}
+
+.bzpso-gen-fields label {
+	font-weight: 400;
+	white-space: nowrap;
+}
+
+.bzpso-gen-fields .description {
+	flex-basis: 100%;
+	color: #646970;
+	font-size: 12px;
+}
+
+.bzpso-control-action {
+	flex-direction: row;
+	align-items: center;
+}
+
+.bzpso-control-action .spinner {
+	float: none;
+	margin: 0 0 0 6px;
+}
+
+.bzpso-notice {
+	margin: 12px 0 0;
+}
+
+.bzpso-notice ul {
+	margin: 0 0 4px 18px;
+	list-style: disc;
+}
+
+/* Results table */
+.bzpso-results {
+	margin-top: 12px;
+}
+
+.bzpso-table {
+	table-layout: fixed;
+	border-collapse: collapse;
+}
+
+.bzpso-table th,
+.bzpso-table td {
+	vertical-align: top;
+	padding: 10px 8px;
+}
+
+.bzpso-table tbody tr {
+	border-top: 1px solid #dcdcde;
+}
+
+.bzpso-table .bzpso-col-0 {
+	width: 46px;
+	text-align: center;
+}
+
+.bzpso-table .bzpso-col-1 {
+	width: 130px;
+}
+
+.bzpso-table .bzpso-col-1 label {
+	font-weight: 600;
+}
+
+.bzpso-table .bzpso-col-2 {
+	width: 32%;
+}
+
+.bzpso-table td.bzpso-col-0 input {
+	margin-top: 4px;
+}
+
+.bzpso-current {
+	max-height: 180px;
+	overflow: auto;
+	white-space: pre-wrap;
+	word-break: break-word;
+	color: #50575e;
+	background: #f6f7f7;
+	border: 1px solid #dcdcde;
+	border-radius: 2px;
+	padding: 6px 8px;
+}
+
+.bzpso-current.is-empty {
+	font-style: italic;
+	color: #8c8f94;
+}
+
+.bzpso-editor input[type="text"],
+.bzpso-editor textarea {
+	width: 100%;
+}
+
+.bzpso-editor textarea {
+	font-family: Consolas, Monaco, monospace;
+	font-size: 12px;
+}
+
+.bzpso-counter,
+.bzpso-note {
+	display: block;
+	margin-top: 4px;
+	font-size: 12px;
+	color: #646970;
+}
+
+.bzpso-counter.is-warning {
+	color: #b32d2e;
+}
+
+.bzpso-preview-toggle {
+	margin-top: 6px;
+}
+
+.bzpso-preview {
+	margin-top: 8px;
+	padding: 8px 12px;
+	border: 1px solid #dcdcde;
+	background: #fff;
+	max-height: 400px;
+	overflow: auto;
+}
+
+.bzpso-preview table {
+	border-collapse: collapse;
+}
+
+.bzpso-preview th,
+.bzpso-preview td {
+	border: 1px solid #dcdcde;
+	padding: 4px 8px;
+}
+
+.bzpso-actions {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
+	margin-top: 12px;
+}
+
+.bzpso-meta {
+	color: #646970;
+	font-size: 12px;
+}
+
+.bzpso-status {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 6px 12px;
+	margin-top: 14px;
+	padding-top: 10px;
+	border-top: 1px solid #f0f0f1;
+	color: #50575e;
+}
+
+.bzpso-status .dashicons-yes-alt {
+	color: #00a32a;
+}
+
+@media screen and (max-width: 782px) {
+	.bzpso-table,
+	.bzpso-table tbody,
+	.bzpso-table tr,
+	.bzpso-table td {
+		display: block;
+		width: auto !important;
+	}
+
+	.bzpso-table thead {
+		display: none;
+	}
+
+	.bzpso-table .bzpso-col-0 {
+		text-align: left;
+	}
+}
+
+/* Products list column */
+.wp-list-table .column-bzpso_seo {
+	width: 84px;
+}
+
+.bzpso-badge {
+	color: #8c8f94;
+}
+
+.bzpso-badge.is-optimized {
+	display: inline-block;
+	padding: 1px 8px;
+	border-radius: 10px;
+	background: #edfaef;
+	color: #00632a;
+	font-size: 12px;
+}
+
+/* Settings page */
+.bzpso-settings .bzpso-checkbox {
+	display: inline-block;
+	min-width: 180px;
+	margin: 0 12px 6px 0;
+}
+
+.bzpso-settings .bzpso-inline-check {
+	margin-left: 8px;
+}
+
+.bzpso-status-ok {
+	color: #00632a;
+}
+
+.bzpso-status-warn {
+	color: #996800;
+}
+
+.bzpso-test-result {
+	margin-left: 8px;
+}
+
+.bzpso-test-result.is-success {
+	color: #00632a;
+}
+
+.bzpso-test-result.is-error {
+	color: #b32d2e;
+}

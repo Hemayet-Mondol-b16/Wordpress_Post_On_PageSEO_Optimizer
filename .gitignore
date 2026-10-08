@@ -1,0 +1,27 @@
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors and IDEs
+.idea/
+.vscode/
+*.swp
+*~
+
+# Dependencies and build output (the plugin itself has none)
+node_modules/
+vendor/
+*.zip
+
+# Logs and local test environments
+*.log
+_t/
+_zip/
+tests/e2e/node_modules/
+
+# Secrets – never commit API keys or local configuration
+.env
+.env.*
+wp-config.php
+*.key
