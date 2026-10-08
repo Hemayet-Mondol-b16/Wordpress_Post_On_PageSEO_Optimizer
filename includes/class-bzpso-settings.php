@@ -259,8 +259,8 @@ class BZPSO_Settings {
 			return;
 		}
 
-		wp_enqueue_style( 'bzpso-admin', BZPSO_URL . 'assets/css/admin.css', array(), BZPSO_VERSION );
-		wp_enqueue_script( 'bzpso-settings', BZPSO_URL . 'assets/js/settings.js', array(), BZPSO_VERSION, true );
+		wp_enqueue_style( 'bzpso-admin', BZPSO_URL . 'assets/css/admin.css', array(), BZPSO_Plugin::asset_version( 'assets/css/admin.css' ) );
+		wp_enqueue_script( 'bzpso-settings', BZPSO_URL . 'assets/js/settings.js', array(), BZPSO_Plugin::asset_version( 'assets/js/settings.js' ), true );
 		wp_add_inline_script(
 			'bzpso-settings',
 			'window.bzpsoSettings = ' . wp_json_encode(

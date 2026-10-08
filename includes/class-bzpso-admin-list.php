@@ -30,7 +30,7 @@ class BZPSO_Admin_List {
 	public function enqueue() {
 		$screen = get_current_screen();
 		if ( $screen && 'edit-product' === $screen->id ) {
-			wp_enqueue_style( 'bzpso-admin', BZPSO_URL . 'assets/css/admin.css', array(), BZPSO_VERSION );
+			wp_enqueue_style( 'bzpso-admin', BZPSO_URL . 'assets/css/admin.css', array(), BZPSO_Plugin::asset_version( 'assets/css/admin.css' ) );
 		}
 	}
 

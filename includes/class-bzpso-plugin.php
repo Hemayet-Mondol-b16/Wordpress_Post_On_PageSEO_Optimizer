@@ -61,6 +61,19 @@ final class BZPSO_Plugin {
 	}
 
 	/**
+	 * Version string for an asset URL (?ver=). Includes the file's modification time so
+	 * browsers, caching plugins and CDNs always load the current file after an update,
+	 * even if the plugin version number was not changed.
+	 *
+	 * @param string $relative Path relative to the plugin folder, e.g. 'assets/js/admin.js'.
+	 * @return string
+	 */
+	public static function asset_version( $relative ) {
+		$mtime = @filemtime( BZPSO_DIR . $relative ); // phpcs:ignore WordPress.PHP.NoSilencedErrors.Discouraged -- A missing file just falls back to the plugin version.
+		return $mtime ? BZPSO_VERSION . '.' . $mtime : BZPSO_VERSION;
+	}
+
+	/**
 	 * Create the settings option with autoload disabled: it is only needed in wp-admin.
 	 */
 	public static function activate() {

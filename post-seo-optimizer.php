@@ -3,7 +3,7 @@
  * Plugin Name:          Post SEO Optimizer
  * Plugin URI:           https://bazarpati.com
  * Description:          AI-assisted SEO rewriting for imported WooCommerce products: title, descriptions, slug, image alt text, tags and Yoast SEO title, meta description and focus keyphrase. Every change is reviewed before it is applied and the original content can be restored.
- * Version:              1.0.0
+ * Version:              1.1.0
  * Requires at least:    6.0
  * Requires PHP:         7.4
  * Requires Plugins:     woocommerce
@@ -13,14 +13,14 @@
  * Text Domain:          post-seo-optimizer
  * Domain Path:          /languages
  * WC requires at least: 7.0
- * WC tested up to:      10.2
+ * WC tested up to:      11.1
  *
  * @package PostSeoOptimizer
  */
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'BZPSO_VERSION', '1.0.0' );
+define( 'BZPSO_VERSION', '1.1.0' );
 define( 'BZPSO_FILE', __FILE__ );
 define( 'BZPSO_DIR', plugin_dir_path( __FILE__ ) );
 define( 'BZPSO_URL', plugin_dir_url( __FILE__ ) );

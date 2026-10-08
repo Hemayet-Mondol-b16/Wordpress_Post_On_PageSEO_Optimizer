@@ -4,7 +4,7 @@ Tags: woocommerce, seo, yoast, ai, product description
 Requires at least: 6.0
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -95,6 +95,13 @@ Any chat model of the selected provider works. Smaller and faster models such as
 Settings and API keys are removed. Original-content backups are removed only if you enable that in the settings. Optimized product content is never touched.
 
 == Changelog ==
+
+= 1.1.0 =
+* Background generation: the AI may take up to 10 minutes (Request timeout 30–600 s) without web server or Cloudflare limits; progress display and resume after reload.
+* Busy-model handling: automatic retry and fallback model.
+* Thinking level setting for Gemini 3 and newer; default model gemini-3.8-flash.
+* Token optimization: choose fields to generate, description length setting, leaner cache-friendly prompt, token usage shown after each generation.
+* Fix: browsers or caches could keep an old copy of the plugin's JavaScript after an update ("config.defaultFields is undefined"). Asset URLs now change whenever a file changes.
 
 = 1.0.0 =
 * Initial release.
